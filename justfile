@@ -1,8 +1,8 @@
 cross_configure:
-    test -e mesonBuild || meson mesonBuild --cross-file=msp430_gcc.cross
+    test -e mspGCCBuild || meson mspGCCBuild --cross-file=msp430_gcc.cross
 
 cross: cross_configure
-    ninja -C mesonBuild
+    ninja -C mspGCCBuild
 
 clean:
-    test -e mesonBuild && rm -r mesonBuild
+    test -e mspGCCBuild && rm -r mspGCCBuild || echo ""
