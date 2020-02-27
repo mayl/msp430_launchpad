@@ -1,0 +1,16 @@
+[binaries]
+c = 'msp430-elf-gcc'
+cpp = 'msp430-elf-g++'
+ld = 'msp430-elf-ld'
+ar = 'msp430-elf-ar'
+as = 'msp430-elf-as'
+size = 'msp430-elf-size'
+objdump = 'msp430-elf-objdump'
+objcopy = 'msp430-elf-objcopy'
+strip = 'msp430-elf-strip'
+
+[host_machine]
+system = 'none'
+cpu_family = 'msp430'
+cpu = 'msp430'
+endian = 'little'
