@@ -2,3 +2,5 @@
 tags
 build/
 mspGCCBuild/
+*.swp
+.envrc
