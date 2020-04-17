@@ -1,5 +1,6 @@
 with 
   import <nixpkgs>{};
+
 mkShell{
   nativeBuildInputs = [ 
     pkgsCross.msp430.buildPackages.gcc
@@ -11,19 +12,7 @@ mkShell{
     just
   ];
 
-  #buildInputs = [];
+  shellHook = '' 
+    alias j=just
+  '';
 }
-
-#let pkgs = import <nixpkgs> {
-#    crossSystem = {
-#        config = "msp430";
-#    };
-#};
-#in
-#    pkgs.callPackage ( 
-#        {mkShell, meson, msp430GccSupport, mspdebug}:
-#        mkShell {
-#            nativeBuildInputs = [ meson ];
-#            buildInputs = [ msp430GccSupport ];
-#        }
-#    ) {}
